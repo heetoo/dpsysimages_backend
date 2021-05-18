@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_extra_fields',
     'images',
+    # Media Cloudinary
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +137,11 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'heetoo-dev',
+    'API_KEY': '851547526511113',
+    'API_SECRET': '9I2rL9rSIaOG-O_J2O-kddz6E-s',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
